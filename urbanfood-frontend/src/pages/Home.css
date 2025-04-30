@@ -1,0 +1,80 @@
+/* Modern gradient background */
+.home-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 2rem;
+  }
+  
+  /* Hero section */
+  .hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+  }
+  
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Service cards */
+/* Enhanced Service Cards */
+.service-card {
+  background: var(--card-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255,255,255,0.3) 0%,
+    rgba(255,255,255,0) 60%
+  );
+  transform: rotate(30deg);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover::before {
+  transform: rotate(30deg) translate(-10px, -10px);
+}
+
+.service-card p {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Dark mode adjustments */
+.home-container.dark .service-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.home-container.dark .service-card p {
+  color: rgba(255,255,255,0.7);
+}
