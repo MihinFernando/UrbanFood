@@ -34,7 +34,7 @@ export default function Home() {
     },
     { 
       title: "Delivery", 
-      path: "/delivery", 
+      path: "/deliveries", 
       icon: "🚚", 
       desc: "Monitor shipments",
       color: "#607D8B" // Blue Grey
